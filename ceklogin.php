@@ -2,7 +2,7 @@
 if(isset($_POST["sbm"])){
 	$username = $_POST['username']; // belom berhasil login
 	$pass= $_POST['pass'];
-	if($username=="Admin" AND $pass=="ridza"){
+	if($username=="admin" AND $pass=="admin"){
 ?>
         <meta http-equiv="refresh" content="2; url=./homeadm.html" />
         <center>
