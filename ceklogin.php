@@ -14,6 +14,9 @@ if(isset($_POST["sbm"])){
   			</div>
 	</div>	
 <?php
-    }
+	}
+	else{
+       header("location:index.html?Wrong username/password");
+	}
 }
 ?>
