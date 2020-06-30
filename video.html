@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Custom fonts for this theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="theme/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <!-- Custom fonts for this theme -->
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum SISMUL</title>
+    <script>
+        window.onload = function() {
+
+            var chart = new CanvasJS.Chart("chartContainer", {
+                theme: "light2", // "light1", "light2", "dark1", "dark2"
+                exportEnabled: true,
+                animationEnabled: true,
+                title: {
+                    // text: "Blackpink - Kill This Love (MV)""
+                },
+                data: [{
+                    type: "pie",
+                    startAngle: 25,
+                    toolTipContent: "<b>{label}</b>: {y}%",
+                    showInLegend: "true",
+                    legendText: "{label}",
+                    indexLabelFontSize: 16,
+                    indexLabel: "{label} - {y}%",
+                    dataPoints: [{
+                        y: 51.08,
+                        label: "Viewers"
+                    }, {
+                        y: 40.82,
+                        label: "Like"
+                    }, {
+                        y: 8.10,
+                        label: "Dislike"
+                    }, ]
+                }]
+            });
+            chart.render();
+
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Praktikum Sistem Multimedia</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#video">Embeded Video <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sound">Embeded Sound</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link enabled" href="#" tabindex="-1" aria-disabled="true">Enabled</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <section class="page-sectopm" id="video">
+        <div class="container" align="center">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="text-center">Embeded Video</h1>
+                    <hr>
+                    <iframe width="700" height="400" src="https://www.youtube.com/embed/2S24-y0Ij3Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section" id="animasi">
+        <div class="container" align="center">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="text-center">Embeded Animasi</h1>
+                    <hr>
+                </div>
+            </div>
+            <h1 id="website">Embeded Gif dari Website</h1>
+            <iframe src="https://giphy.com/embed/5bE08mw7RqlEZkwKqg" width="700" height="400" frameBorder="0" allowFullScreen></iframe>
+            <h1 id="direktori">Gif dari Direktori</h1>
+            <img src="giphy.gif" width="700" height="400">
+            <h1 id="grafik">Grafik diberi Animasi</h1>
+            <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+            <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        </div>
+    </section>
+
+    <section class="page-sectopm" id="sound">
+        <div class="container" align="center">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="text-center">Memasukkan Sound</h1>
+                    <hr>
+                </div>
+            </div>
+            <audio src="contohlagu.mp3" controls preload="auto"></audio>
+        </div>
+    </section>
+
+</body>
+
+</html>
